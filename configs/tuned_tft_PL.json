@@ -1,0 +1,100 @@
+{
+ "market": "PL",
+ "model": "tft",
+ "calibration_end": "2017-07-01",
+ "validation": [
+  "2017-07-01",
+  "2017-12-30"
+ ],
+ "objective": "mean MAE48 on validation origins",
+ "n_trials": 6,
+ "best_value": 19.715914987442808,
+ "failed_trials": [],
+ "log": [
+  {
+   "trial": 0,
+   "mae48": 21.450829259976604,
+   "n_val": 177,
+   "params": {
+    "input_size": 72,
+    "hidden_size": 128,
+    "n_head": 2,
+    "dropout": 0.22467199126017354,
+    "learning_rate": 0.0009234256795472351
+   },
+   "sec": 134.48243308067322
+  },
+  {
+   "trial": 1,
+   "mae48": 22.353937145960813,
+   "n_val": 173,
+   "params": {
+    "input_size": 168,
+    "hidden_size": 128,
+    "n_head": 4,
+    "dropout": 0.28939427921157906,
+    "learning_rate": 0.0011721171155398334
+   },
+   "sec": 370.48670959472656
+  },
+  {
+   "trial": 2,
+   "mae48": 19.715914987442808,
+   "n_val": 173,
+   "params": {
+    "input_size": 168,
+    "hidden_size": 128,
+    "n_head": 2,
+    "dropout": 0.23724675535433656,
+    "learning_rate": 0.0001788385264922819
+   },
+   "sec": 593.9789154529572
+  },
+  {
+   "trial": 3,
+   "mae48": 21.40436190241312,
+   "n_val": 166,
+   "params": {
+    "input_size": 336,
+    "hidden_size": 128,
+    "n_head": 2,
+    "dropout": 0.26852685841617635,
+    "learning_rate": 0.001190522078911614
+   },
+   "sec": 990.362461566925
+  },
+  {
+   "trial": 4,
+   "mae48": 21.12005000216813,
+   "n_val": 177,
+   "params": {
+    "input_size": 72,
+    "hidden_size": 128,
+    "n_head": 2,
+    "dropout": 0.21285293406275368,
+    "learning_rate": 0.00018323392283214987
+   },
+   "sec": 1121.6937973499298
+  },
+  {
+   "trial": 5,
+   "mae48": 21.184236516722713,
+   "n_val": 166,
+   "params": {
+    "input_size": 336,
+    "hidden_size": 32,
+    "n_head": 2,
+    "dropout": 0.25458042359333366,
+    "learning_rate": 0.002217180659236198
+   },
+   "sec": 1281.929883480072
+  }
+ ],
+ "best": {
+  "input_size": 168,
+  "hidden_size": 128,
+  "n_head": 2,
+  "dropout": 0.23724675535433656,
+  "learning_rate": 0.0001788385264922819
+ }
+}

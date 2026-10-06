@@ -1,0 +1,18 @@
+arch==8.0.0
+joblib==1.6.0
+lxml==6.1.3
+matplotlib==3.11.2
+neuralforecast==3.2.2
+numpy==2.5.3
+optuna==5.0.0
+pandas==2.3.3
+pyarrow==25.0.1
+pytorch-lightning==2.5.6
+PyYAML==6.0.3
+requests==2.34.2
+ruptures==1.1.10
+scikit-learn==1.9.1
+scipy==1.18.1
+statsmodels==0.15.0
+torch==2.10.0+cu126
+# torch with CUDA: pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cu126

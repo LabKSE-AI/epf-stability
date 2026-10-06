@@ -1,0 +1,15 @@
+{
+  "title": "epf-stability: temporal (in)stability of day-ahead electricity-price-forecasting models",
+  "upload_type": "software",
+  "description": "Code accompanying the article \"Temporal (in)stability of day-ahead electricity-price-forecasting models: detection, attribution and forecast combination on the Polish market, with validation on two European markets\". Leakage-free rolling walk-forward protocol, forecasting models (naive benchmarks, LEAR, gradient-boosted trees, recurrent networks, DNN, N-BEATSx, TFT), statistical evaluation and stability analyses. Code only; no data are distributed.",
+  "creators": [
+    {
+      "name": "Wotzka, Daria",
+      "orcid": "0000-0002-8861-7974",
+      "affiliation": "LabKSE-AI, Faculty of Electrical Engineering, Automatic Control and Computer Science, Opole University of Technology"
+    }
+  ],
+  "license": "MIT",
+  "keywords": ["electricity price forecasting", "day-ahead market", "temporal stability", "forecast evaluation", "change-point detection", "forecast combination"],
+  "access_right": "open"
+}

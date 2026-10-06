@@ -1,0 +1,47 @@
+# Figure configuration — all styling and texts live here, not in the plotting code.
+lang: en                     # en | pl
+formats: [png, pdf]
+dpi: 300
+font: {family: DejaVu Sans, size: 8}
+size_cm: {single: [8.8, 6.0], double: [18.0, 7.5], tall: [18.0, 11.0]}
+surface: "#ffffff"
+ink: {primary: "#0b0b0b", secondary: "#52514e", grid: "#e4e3df"}
+# categorical slots (validated: scripts in the dataviz guideline; CVD ΔE ≥ 9.1 adjacent) + neutral benchmarks
+models:
+  lear:          {color: "#2a78d6", marker: o, ls: "-",  en: LEAR,                   pl: LEAR}
+  gbt:           {color: "#eb6834", marker: s, ls: "-",  en: GBT,                    pl: GBT}
+  gbt_nofuel:    {color: "#eb6834", marker: s, ls: "-",  en: GBT,                    pl: GBT}
+  ens_avg:       {color: "#1baf7a", marker: D, ls: "--", en: "LEAR+GBT (equal)",     pl: "LEAR+GBT (równe wagi)"}
+  ens_inv30:     {color: "#1baf7a", marker: D, ls: "-",  en: "LEAR+GBT (inv-MSE)",   pl: "LEAR+GBT (odwr. MSE)"}
+  dnn:           {color: "#eda100", marker: "^", ls: "-", en: DNN,                   pl: DNN}
+  dnn_ens:       {color: "#eda100", marker: "^", ls: "--", en: DNN-Ens,              pl: DNN-Ens}
+  nbeatsx:       {color: "#e87ba4", marker: v, ls: "-",  en: N-BEATSx,               pl: N-BEATSx}
+  lstm_untuned:  {color: "#008300", marker: P, ls: "-",  en: LSTM,                   pl: LSTM}
+  bilstm_untuned: {color: "#008300", marker: X, ls: "--", en: BiLSTM,                pl: BiLSTM}
+  gru_untuned:   {color: "#008300", marker: "*", ls: ":", en: GRU,                   pl: GRU}
+  lstm_tuned:    {color: "#008300", marker: h, ls: "-.", en: "LSTM (tuned)",         pl: "LSTM (strojony)"}
+  tft:           {color: "#4a3aa7", marker: p, ls: "-",  en: TFT,                    pl: TFT}
+  naive:         {color: "#8a8986", marker: ".", ls: ":", en: "seasonal naïve",      pl: "naiwny sezonowy"}
+  naive_sd:      {color: "#52514e", marker: ".", ls: "--", en: "similar-day naïve",  pl: "naiwny podobnego dnia"}
+  oracle:        {color: "#b9b8b4", marker: "", ls: "-", en: "selection oracle",     pl: "wyrocznia wyboru"}
+markets: {PL: {en: Poland (TGE), pl: Polska (TGE)}, DE: {en: Germany (EPEX SPOT), pl: Niemcy (EPEX SPOT)}, SE4: {en: Sweden SE4 (Nord Pool), pl: Szwecja SE4 (Nord Pool)}}
+regimes: {pre: {en: pre-crisis, pl: przed kryzysem}, crisis: {en: crisis, pl: kryzys}, post: {en: post-crisis, pl: po kryzysie}}
+text:
+  quarter:        {en: Quarter, pl: Kwartał}
+  rmse48:         {en: "median RMSE$_{48}$", pl: "mediana RMSE$_{48}$"}
+  scaled_mae:     {en: "MAE$_{48}$ / 28-day median price", pl: "MAE$_{48}$ / mediana ceny z 28 dni"}
+  skill:          {en: "skill vs seasonal naïve [%]", pl: "skill wzgl. naiwnej sezonowej [%]"}
+  window:         {en: "training window [days]", pl: "okno uczące [dni]"}
+  break:          {en: "2021-Q4 break", pl: "zmiana 2021-Q4"}
+  currency_PL:    {en: "PLN/MWh", pl: "PLN/MWh"}
+  currency_EUR:   {en: "EUR/MWh", pl: "EUR/MWh"}
+  fuel_gain:      {en: "reduction of mean MAE$_{48}$ by the inputs [%]", pl: "redukcja średniego MAE$_{48}$ dzięki wejściom [%]"}
+  cadence:        {en: "recalibration every … days", pl: "rekalibracja co … dni"}
+  gain_vs_daily:  {en: "reduction of mean MAE$_{48}$ vs daily recalibration [%]", pl: "redukcja średniego MAE$_{48}$ wzgl. rekalibracji codziennej [%]"}
+  refits:         {en: "refits", pl: "estymacji"}
+  better:         {en: "above 0: better", pl: "powyżej 0: lepiej"}
+fuel_variants:     # fixed categorical order (validated palette slots 1–4)
+  fuel:    {color: "#2a78d6", marker: o, en: "gas, coal, CO$_2$ (EUR/USD)", pl: "gaz, węgiel, CO$_2$ (EUR/USD)"}
+  fuelpln: {color: "#eb6834", marker: s, en: "gas, coal, CO$_2$ (PLN)",     pl: "gaz, węgiel, CO$_2$ (PLN)"}
+  co2:     {color: "#1baf7a", marker: D, en: "daily CO$_2$ only (EUR)",      pl: "tylko dzienna cena CO$_2$ (EUR)"}
+  co2pln:  {color: "#eda100", marker: "^", en: "daily CO$_2$ only (PLN)",    pl: "tylko dzienna cena CO$_2$ (PLN)"}

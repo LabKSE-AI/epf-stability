@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the article and this software."
+title: "epf-stability: temporal (in)stability of day-ahead electricity-price-forecasting models"
+type: software
+authors:
+  - family-names: Wotzka
+    given-names: Daria
+    orcid: "https://orcid.org/0000-0002-8861-7974"
+    affiliation: "LabKSE-AI, Faculty of Electrical Engineering, Automatic Control and Computer Science, Opole University of Technology"
+license: MIT
+repository-code: "https://github.com/LabKSE-AI/epf-stability"
+version: "1.0.0"
+date-released: "2026-10-22"
+keywords:
+  - electricity price forecasting
+  - day-ahead market
+  - temporal stability
+  - forecast evaluation
+  - change-point detection
+  - forecast combination

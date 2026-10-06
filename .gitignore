@@ -1,0 +1,18 @@
+# data are NEVER committed (licences / access restrictions) — see README, section "Data"
+data/
+results/
+logs/
+*.parquet
+*.npz
+*.csv
+!configs/*.csv
+.venv*/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# secrets
+*token*
+*key*.txt
+*.env
+*credential*
+backup_runs/
