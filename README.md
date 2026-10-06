@@ -2,8 +2,7 @@
 
 Code accompanying the article *“Temporal (in)stability of day-ahead electricity-price-forecasting models:
 detection, attribution and forecast combination on the Polish market, with validation on two European markets”*
-(D. Wotzka, P. Kurtasz, O. Zmarzły). Developed in **LabKSE-AI**, Faculty of Electrical Engineering, Automatic
-Control and Computer Science, Opole University of Technology.
+(D. Wotzka, P. Kurtasz, O. Zmarzły). Maintained by **LabKSE-AI**, the research group of the authors.
 
 The repository contains **code only**. No data are distributed: the data sources require registration,
 are licensed, or prohibit redistribution (see [Data](#data)). The scripts download the freely accessible
