@@ -91,6 +91,12 @@ GRU and seed 5 of the untuned LSTM and BiLSTM were computed on the CPU, and TFT 
 All steps above are chained in `scripts/run_all_analyses.sh` (set `EXO` to the directory with the fuel, carbon and
 exchange-rate files and `MASTER` to the Polish hourly master file).
 
+## How the code was written
+
+The methods, models and analyses were designed by the authors, who specified every component, reviewed the code and validated
+the results. The implementation was written with the assistance of AI coding assistants (Claude models by Anthropic) working
+under the authors' direction.
+
 ## How to cite
 
 Please cite the article and this software; citation metadata are in `CITATION.cff` (an archived version with a DOI
