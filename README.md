@@ -65,6 +65,17 @@ python scripts/watchdog.py                                                  # pr
 ```
 Outputs: `results/<MARKET>/w<window>_c<cadence>/` (per-origin errors, forecast vectors, metadata).
 
+Sensitivity runs of the paper (training windows `W` ∈ {90, 120, 180, 365, 548, 730, 1095, 1460} days):
+
+```bash
+python scripts/run.py --market PL --model lear --window W --fuels co2_eua_eur gas_eu_usd_mmbtu coal_za_usd_mt --suffix _fuel     # gas, coal, CO2 in their original currencies
+python scripts/run.py --market PL --model lear --window W --fuels co2_eua_pln_t gas_eu_pln_mwh coal_za_pln_t --suffix _fuelpln  # the same in PLN
+python scripts/run.py --market PL --model lear --window W --fuels co2_eua_eur --suffix _co2        # daily carbon price as the only fundamental input (EUR)
+python scripts/run.py --market PL --model lear --window W --fuels co2_eua_pln_t --suffix _co2pln   # the same in PLN
+python scripts/run_deep.py --market PL --model dnn --seed S --window W                              # DNN at every window (seeds S = 1, 2, 3)
+python scripts/run.py --market PL --model lear --window 730 --cadence C                            # recalibration every C = 1, 14, 30 days
+```
+
 ### Analyses of the paper (after the runs)
 
 ```bash

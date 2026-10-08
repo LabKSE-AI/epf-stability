@@ -235,7 +235,8 @@ def fig_fuel_inputs(market, lang):
 
 
 def fig_cadence(market, lang):
-    """LEAR (730 days): change of mean MAE48 relative to daily recalibration, with 95% CI and refit counts."""
+    """LEAR (730 days): change of mean MAE48 relative to daily recalibration with 95% CI; the number of
+    model estimations of each cadence is shown on the upper axis."""
     f = RESULTS / "tables" / f"cadence_{market}.csv"
     if not f.exists():
         return
@@ -250,9 +251,16 @@ def fig_cadence(market, lang):
     col = mstyle("lear")["color"]
     ax.errorbar(x, y, yerr=[lo, hi], color=col, marker="o", ms=4, lw=1.2, elinewidth=0.8, capsize=2)
     ax.axhline(0, color=CFG["ink"]["secondary"], lw=0.8)
-    ax.set_xticks(x, [f"{int(r.cadence_days)}\n({int(r.refits)} {T('refits', lang)})" for _, r in t.iterrows()], fontsize=6.5)
+    ax.set_xticks(x, [str(int(c)) for c in t.cadence_days])
+    ax.set_xlim(-0.4, len(t) - 0.6)
     ax.set_xlabel(T("cadence", lang))
     ax.set_ylabel(T("gain_vs_daily", lang))
+    sep = "\u202f" if lang == "pl" else ","
+    top = ax.secondary_xaxis("top")
+    top.set_xticks(x, [f"{int(r):,}".replace(",", sep) for r in t.refits])
+    top.set_xlabel(T("refits", lang))
+    top.tick_params(length=0)
+    top.spines["top"].set_visible(False)
     save(fig, "retraining_cadence" if market == "PL" else f"retraining_cadence_{market}", lang)
 
 
