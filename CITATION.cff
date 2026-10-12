@@ -9,6 +9,7 @@ authors:
     affiliation: "Opole University of Technology"
 license: MIT
 repository-code: "https://github.com/LabKSE-AI/epf-stability"
+doi: "10.5281/zenodo.23321571"
 version: "1.0.0"
 date-released: "2026-10-12"
 keywords:

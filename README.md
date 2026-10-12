@@ -109,8 +109,8 @@ under the authors' direction.
 
 ## How to cite
 
-Please cite the article and this software; citation metadata are in `CITATION.cff` (an archived version with a DOI
-is listed there once released).
+Please cite the article and this software; citation metadata are in `CITATION.cff`. Version 1.0.0 is archived in Zenodo:
+https://doi.org/10.5281/zenodo.23321571 (all versions: https://doi.org/10.5281/zenodo.23321570).
 
 ## Licence
 
