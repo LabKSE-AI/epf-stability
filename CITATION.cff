@@ -10,7 +10,7 @@ authors:
 license: MIT
 repository-code: "https://github.com/LabKSE-AI/epf-stability"
 version: "1.0.0"
-date-released: "2026-10-22"
+date-released: "2026-10-12"
 keywords:
   - electricity price forecasting
   - day-ahead market
